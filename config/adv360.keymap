@@ -25,24 +25,16 @@
         ctrl_alt: ctrl_alt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LALT>,
-                <&macro_release>,
-                <&kp LCTRL &kp LALT>;
-
+            bindings = <&macro_press &kp LCTRL &kp LALT>,
+                    <&macro_release &kp LCTRL &kp LALT>;
             label = "CTRL_ALT";
         };
 
         ctrl_alt_shift: ctrl_alt_shift {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LEFT_ALT &kp LEFT_SHIFT>,
-                <&macro_release>,
-                <&kp LCTRL &kp LALT &kp LSHIFT>;
-
+            bindings = <&macro_press &kp LCTRL &kp LALT &kp LSHIFT>,
+                    <&macro_release &kp LCTRL &kp LALT &kp LSHIFT>;
             label = "CTRL_ALT_SHIFT";
         };
     };
